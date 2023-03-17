@@ -1,5 +1,4 @@
-
-0;276;0c#include <stdio.h>
+#include <stdio.h>
 #include <unistd.h>
 
 /**

@@ -3,7 +3,8 @@
 /**
  * _islower - Entry point
  *
- *Descriptions: takes in an integer parameter ofr the ascii value
+ * Descriptions: takes in an integer parameter ofr the ascii value
+ * @c: parameter for ascii value
  *
  * Return: Always 0 (success)
  */

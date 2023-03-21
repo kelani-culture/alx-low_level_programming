@@ -2,6 +2,8 @@
 /**
  * _isalpha - Entry point
  *
+ * Descriptions: _isalpha takes in an int param as ascii value
+ *
  * Return: Always 0 (success)
  */
 

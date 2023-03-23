@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int prev = 1, current = 2;
+	long int prev = 1, curr = 2;
 	int sum_even = 0, fibo;
 
 	for (fibo = 0; fibo <= 4000000; fibo++)
@@ -22,6 +22,6 @@ int main(void)
 		prev = curr;
 		curr = next_term;
 	}
-	printf("d\n", sum_even);
+	printf("%d\n", sum_even);
 	return (0);
 }

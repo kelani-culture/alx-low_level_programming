@@ -9,7 +9,7 @@
 int main(void)
 {
 	long int prev = 1, curr = 2;
-	int sum_even = 0, fibo;
+	int sum_even = 0;
 
 	while (curr <= 4000000)
 	{

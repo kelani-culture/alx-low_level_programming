@@ -3,7 +3,7 @@
 /**
  * main - Entry points
  *
- * ReturnL Alwaay 0 (success)
+ * Return: Alwaay 0 (success)
  */
 
 int main(void)
@@ -11,7 +11,7 @@ int main(void)
 	long int prev = 1, curr = 2;
 	int sum_even = 0, fibo;
 
-	for (fibo = 0; fibo <= 4000000; fibo++)
+	while (curr <= 4000000)
 	{
 		int next_term = prev + curr;
 

@@ -18,7 +18,7 @@ int main(void)
 		next_term = prev + curr;
 
 		prev = curr;
-		curr == next_term;
+		curr = next_term;
 
 		if (i != (98 - 1))
 		{

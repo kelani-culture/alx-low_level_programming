@@ -16,7 +16,7 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
-		if (fibo != 50)
+		if (fibo != 49)
 		{
 			putchar(',');
 			putchar(' ');

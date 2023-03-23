@@ -10,13 +10,13 @@ int main(void)
 {
 	long int a = 1, b = 2, c, fibo;
 
-	for (fibo = 0; fibo <= 50; fibo++)
+	for (fibo = 0; fibo <= 100; fibo++)
 	{
 		printf("%lu", a);
 		c = a + b;
 		a = b;
 		b = c;
-		if (fibo != 50)
+		if (fibo != 100)
 		{
 			printf(",");
 			printf(" ");

@@ -8,17 +8,16 @@
 
 void more_numbers(void)
 {
-	int i, j;
+	int height, width;
 
-	for (i = 0; i <= 10; i++)
+	for (height = 0; height <= 10; height++)
 	{
-		for (j = 0; j <= 14; j++)
+		for (width = 0; width <= 14; width++)
 		{
-			if (j >= 10)
-			{
-				_putchar((j / 10) + '0');
-			}
-			_putchar((j % 10) + '0');
+			if (width > 9)
+
+				_putchar((width / 10) + '0');
+			_putchar((width % 10) + '0');
 		}
 		_putchar('\n');
 	}

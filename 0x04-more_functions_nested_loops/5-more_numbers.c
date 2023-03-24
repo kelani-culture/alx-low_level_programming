@@ -15,8 +15,9 @@ void more_numbers(void)
 		for (width = 0; width <= 14; width++)
 		{
 			if (width > 9)
-
+			{
 				_putchar((width / 10) + '0');
+			}
 			_putchar((width % 10) + '0');
 		}
 		_putchar('\n');

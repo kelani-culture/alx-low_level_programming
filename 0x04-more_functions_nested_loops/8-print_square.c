@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - print square 
+ * print_square - print square
  * @size: integers
  *
  * Return: void

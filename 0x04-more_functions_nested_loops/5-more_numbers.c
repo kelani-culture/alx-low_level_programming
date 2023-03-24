@@ -10,7 +10,7 @@ void more_numbers(void)
 {
 	int height, width;
 
-	for (height = 0; height <= 10; height++)
+	for (height = 0; height <= 9; height++)
 	{
 		for (width = 0; width <= 14; width++)
 		{

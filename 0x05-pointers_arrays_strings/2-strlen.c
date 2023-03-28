@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * _strlen - main entry points
- *
- * Descriptions: return the length of a string
- * @s: string
- *
- * return: the lenth of string s
- */
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
 
 int _strlen(char *s)
 {

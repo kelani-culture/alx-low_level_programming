@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 
 /**
  *  *_strcpy - copy string
@@ -11,17 +11,15 @@ i#include "main.h"
 
 char *_strcpy(char *dest, char *src)
 {
+	int j, len;
 
-	int i, length;
-
-	for (length = 0; src[length] != '\0'; length++)
+	for (len = 0; src[len] != '\0'; len++)
 	{
 	}
 
-	for (i = 0; i <= length ; i++)
+	for (j = 0; j <= len ; j++)
 	{
-		dest[i] = src[i];
+		dest[j] = src[j];
 	}
-	return (dest);
-
+	return (dest)
 }

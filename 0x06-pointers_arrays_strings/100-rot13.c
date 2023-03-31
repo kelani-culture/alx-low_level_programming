@@ -13,9 +13,9 @@ char *rot13(char *str)
 
 	while (*ptr != '\0')
 	{
-		while (*ptr >= 'A' && *ptr <= 'Z' || *ptr >= 'a' && *ptr <= 'z')
+		while ((*ptr >= 'A' && *ptr <= 'Z') || (*ptr >= 'a' && *ptr <= 'z'))
 		{
-			if (*ptr >= 'A' && *ptr <= 'M' || *ptr >= 'a' && *ptr <= 'm')
+			if ((*ptr >= 'A' && *ptr <= 'M') || (*ptr >= 'a' && *ptr <= 'm'))
 			{
 				*ptr += 13;
 				break;

@@ -12,7 +12,7 @@
 void reverse_array(int *a, int n)
 {
 	int *start_ptr = a;
-	int *end_ptr = a + n - 1; /* the first array added to the size of the the array -1 gives the last element of the array*/
+	int *end_ptr = a + n - 1;
 	int temp;
 
 	while (end_ptr > start_ptr)

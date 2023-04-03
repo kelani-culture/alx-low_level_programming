@@ -11,23 +11,23 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int sum = 0;
+	unsigned int i = 0, j;
 
-	while (*s != '\0')
+	while (s[i])
 	{
-		while (*accept != '\0')
+		for (j = 0; accept[j]; j++)
 		{
-			if (*s == *accept)
+			if (s[i] == accept[j])
 			{
-				sum += 1;
+				break;
 			}
-			accept++;
+			j++;
 		}
-		if (*s == ' ')
+		if (!(accept[j]))
 		{
-			break;
+			return (i);
 		}
-		s++;
+		i++;
 	}
-	return (sum);
+	return (i);
 }

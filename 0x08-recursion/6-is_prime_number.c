@@ -43,7 +43,7 @@ int is_prime_number(int n)
 
 int search_prime(int n, int k)
 {
-	if (k *k > n)
+	if (k * k > n)
 	{
 		return (TRUE);
 	}
@@ -52,5 +52,5 @@ int search_prime(int n, int k)
 		return (FALSE);
 	}
 
-	return search_prime(n, k + NUM_EVEN);
+	return (search_prime(n, k + NUM_EVEN));
 }

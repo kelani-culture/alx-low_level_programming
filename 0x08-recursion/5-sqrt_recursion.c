@@ -40,7 +40,7 @@ int sqrt_bin_search(int n, int low, int high)
 {
 	if (low <= high)
 	{
-		int mid = (low + high);
+		int mid = (low + high) / 2;
 
 		if (mid * mid == n)
 		{

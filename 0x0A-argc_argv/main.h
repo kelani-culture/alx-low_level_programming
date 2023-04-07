@@ -2,4 +2,5 @@
 #define MAIN_H_
 
 int main(int argc, char *argv[]);
+int main(int argc, char *argv[])
 #endif

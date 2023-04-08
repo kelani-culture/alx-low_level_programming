@@ -8,6 +8,8 @@
  *
  * @argc: integer value
  * @argv: char array
+ *
+ * Return: 0 if (successful) else 1 if (unsuccessful)
  */
 
 int add_positive(int argc, char *argv[])
@@ -19,7 +21,7 @@ int add_positive(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	for (i = 1; i < argc; i++)
 	{
 		if (!isdigit(*argv[i]) || atoi(argv[i]) < 0)
@@ -35,7 +37,6 @@ int add_positive(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
-
 
 /**
  * main - Entry points

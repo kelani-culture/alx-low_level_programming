@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*#include <stdlib.h>*/
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -15,18 +15,26 @@ int _multi(int argc, char *argv[])
 {
 	int i, multi = 1;
 
-	if (argc < 2)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		multi *= argv[i];
+		multi *= atoi(argv[i]);
 	}
 	printf("%d\n", multi);
 	return (0);
 }
+/**
+ * main - Entry point
+ *
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: Alwayys 0 (success)
+ */
 
 int main(int argc, char *argv[])
 {

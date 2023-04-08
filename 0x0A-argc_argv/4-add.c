@@ -31,7 +31,7 @@ int add_positive(int argc, char *argv[])
 		}
 		else
 		{
-			sum += atoi(argv[i]);
+			sum += atof(argv[i]);
 		}
 	}
 	printf("%d\n", sum);

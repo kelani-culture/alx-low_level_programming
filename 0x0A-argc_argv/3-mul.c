@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+/*#include <stdlib.h>*/
 #include "main.h"
 
 /**
@@ -22,7 +22,7 @@ int _multi(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		multi *= atoi(argv[i]);
+		multi *= argv[i];
 	}
 	printf("%d\n", multi);
 	return (0);

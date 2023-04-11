@@ -39,8 +39,8 @@ char *_strdup(char *str)
 
 int strL(char *str)
 {
-	if (*s == '\0')
+	if (*str == '\0')
 		return (0);
 	else
-		return (1 + strL(s + 1));
+		return (1 + strL(str + 1));
 }

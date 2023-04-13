@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (j = 0; j <= n; j++)
 	{
-		concat[index++] = s2[i - 1];
+		concat[index++] = s2[j - 1];
 
 		if (s2[j] != '\0')
 			break;

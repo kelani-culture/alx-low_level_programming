@@ -11,7 +11,7 @@
 
 int *array_range(int min, int max)
 {
-	int *alloc, i;
+	int *alloc; unsigned int i;
 	size_t size = (max - min) + 1;
 
 	if (min > max)

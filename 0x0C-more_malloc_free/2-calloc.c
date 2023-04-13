@@ -25,11 +25,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	else
 	{
-		byte_ptr = (char *)alloc;
+		bytes_ptr = (char *)alloc;
 
 		for (i = 0; i < (nmemb * size); i++)
 		{
 			bytes_ptr[i] = 0;
+
 		}
 	}
 

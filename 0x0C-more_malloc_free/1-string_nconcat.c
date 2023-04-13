@@ -41,9 +41,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (j = 0; j <= n; j++)
 	{
-		concat[index++] = s2[i];
+		concat[index++] = s2[i - 1];
 
-		if (j >= len_2)
+		if (j > len_2)
 			break;
 	}
 	return (concat);

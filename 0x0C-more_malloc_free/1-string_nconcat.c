@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		concat[index++] = s2[i - 1];
 
-		if (j >= len_2)
+		if (s2[j] != '\0')
 			break;
 	}
 	return (concat);

@@ -11,7 +11,8 @@
 
 int *array_range(int min, int max)
 {
-	int *alloc; unsigned int i;
+	int *alloc;
+	unsigned int i;
 	size_t size = (max - min) + 1;
 
 	if (min > max)
@@ -20,6 +21,8 @@ int *array_range(int min, int max)
 	}
 
 	alloc = malloc(sizeof(int *) * size);
+	if (alloc == NULL)
+		return (NULL);
 
 	for (i = 0; i < size; i++)
 	{

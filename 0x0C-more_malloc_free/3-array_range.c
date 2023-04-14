@@ -13,7 +13,7 @@ int *array_range(int min, int max)
 {
 	int *alloc;
 	unsigned int i;
-	size_t size = (max - min) + 1;
+	size_t size = (max - min);
 
 	if (min > max)
 	{
@@ -24,9 +24,9 @@ int *array_range(int min, int max)
 	if (alloc == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; min <= max; i++)
 	{
-		alloc[i] = min + i;
+		alloc[i] = min++;
 	}
 	return (alloc);
 }

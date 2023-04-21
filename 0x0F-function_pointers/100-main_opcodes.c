@@ -10,13 +10,11 @@
  * Return: Always 0 success
  */
 
-void print_opcode(char *func, int number_bytes);
-
-int main(int argc, char *argv[])
+int main(int argc, char *argv[], char *envp[])
 {
-	int number_bytes;
-	unsigned char *func;
-
+	int number_bytes, i;
+	char *func = (char *)main;
+	(void) envp;
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -30,16 +28,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	func = (unsigned char*)main;
 
-	print_opcode(func, number_bytes);
-}
+	for (i = 0; i < number_bytes; i++)
+	{
+		printf("%02x", func[i] & 0xFF);
 
-void print_opcode(char *func, int number_bytes)
-{
-	int i;
-
-	for(i = 0; i < number_bytes; i++)
-		printf("%02x ", func[i]);
+		if (i < number_bytes - 1)
+			printf(" ");
+	}
 	printf("\n");
+	return (0);
 }

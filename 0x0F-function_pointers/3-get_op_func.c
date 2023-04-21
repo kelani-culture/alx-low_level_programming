@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "3-calc.h"
-
+#include <stdlib.h>
 /**
  * get_op_func - check for matching operators
  *

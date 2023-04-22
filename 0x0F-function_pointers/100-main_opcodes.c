@@ -6,6 +6,7 @@
  * main -  program that prints the opcodes of its own main function.
  *
  * @argc: argumnet count
+ * @envp: env pointer
  * @argv: argument variable
  * Return: Always 0 success
  */

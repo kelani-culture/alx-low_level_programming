@@ -1,14 +1,18 @@
-extern _printf
+SECTION .data
+msg: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
 
-global _main
+SECTION .text
+extern printf
+global main, _start
 
-section .text
+main:
+_start:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-_main :
-	push msg
-	call _printf
-	ret
+	mov ebx, 0
+	mov eax, 1
 
-
-section .data
-msg : db 'Hello, Holberton', 10, 0

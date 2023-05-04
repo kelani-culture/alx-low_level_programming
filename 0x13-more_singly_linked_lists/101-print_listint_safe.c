@@ -11,19 +11,22 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
-	const listint_t *currNode = head;
+	const listint_t *current = head;
 
-	while (currNode != NULL)
+	while (current != NULL  && current->next != NULL)
 	{
-		printf("[%p] [%d]\n", (void *)currNode, currNode->n);
+		printf("[%p] %d\n", (void *)current, current->n);
 		count++;
 
-		if (currNode <= currNode->next)
+		if (current <= current->next)
 		{
-			printf("[%p] [%d]\n", (void *)currNode, currNode->n);
+			printf("->[%p] %d\n", (void *)current->next,current->n);
 			exit(98);
 		}
-		currNode = currNode->next;
+
+		current = current->next;
 	}
-	return (count);
+
+	return count;
 }
+

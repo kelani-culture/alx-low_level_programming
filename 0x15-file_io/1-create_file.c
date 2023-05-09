@@ -26,9 +26,6 @@ int create_file(const char *filename, char *text_content)
 	while (text_content[len])
 		len++;
 
-	if (text_content == NULL)
-		text_content = "";
-
 	if (access(filename, F_OK) == -1)
 	{
 		fd = open(filename, O_CREAT | O_RDWR, 0600);
@@ -46,11 +43,14 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		}
 	}
-	bytes = write(fd, text_content, len);
-	if (bytes == -1)
+	if (text_content != NULL)
 	{
-		close(fd);
-		return (-1);
+		bytes = write(fd, text_content, len);
+		if (bytes == -1)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 	close(fd);
 	return (1);

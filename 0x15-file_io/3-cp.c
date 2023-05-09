@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define BUF_SIZE 1024
+#define UNUSED(x) (void)(x)
 
 /**
  * main - Entry ppoint
@@ -12,7 +13,7 @@
  * Return: 0 success and error code on failure
  */
 
-int copy_content(char *file_from, char *file_to);
+int copy_content(int ac, char **av);
 
 int main(int ac, char **av)
 {
@@ -21,24 +22,26 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copy_content(av[1], av[2]);
+	copy_content(ac, av);
 	return (0);
 }
 
 /**
  * copy_content - Copies the content of one file to another file
  *
- * @file_from: The name of the source file
- * @file_to: The name of the destination file
+ * @ac: argument countn
+ * @av: argument variable
  *
  * Return: 0 on success, otherwise exits with error codes
  */
-int copy_content(char *file_from, char *file_to)
+
+int copy_content(int ac, char **av)
 {
 	int fd_to, fd_from;
 	ssize_t bytes_write, bytes_read;
-	char buf[BUF_SIZE];
+	char buf[BUF_SIZE], *file_to = av[2], *file_from = av[1];
 
+	UNUSED(ac);
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 	{
@@ -79,3 +82,4 @@ int copy_content(char *file_from, char *file_to)
 	}
 	return (0);
 }
+

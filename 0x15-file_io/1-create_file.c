@@ -17,7 +17,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, len = 0, result;
+	int fd, len = 0;
 	ssize_t bytes;
 
 	if  (filename == NULL)
@@ -25,6 +25,10 @@ int create_file(const char *filename, char *text_content)
 
 	while (text_content[len])
 		len++;
+
+	if (text_content == NULL)
+		text_content = "";
+
 	if (access(filename, F_OK) == -1)
 	{
 		fd = open(filename, O_CREAT | O_RDWR, 0600);
@@ -33,9 +37,6 @@ int create_file(const char *filename, char *text_content)
 			close(fd);
 			return (-1);
 		}
-		result = fchmod(fd, 0600);
-		if (result == -1)
-			return (-1);
 	}
 	else
 	{
@@ -51,7 +52,6 @@ int create_file(const char *filename, char *text_content)
 		close(fd);
 		return (-1);
 	}
-	/*read(STDOUT_FILENO, text_content, bytes);*/
 	close(fd);
 	return (1);
 }

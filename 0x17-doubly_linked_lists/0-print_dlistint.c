@@ -4,7 +4,7 @@
 
 /**
  * print_dlistint - print a double linked list
- * @dlistint_t: pointer to linked list
+ * @h: pointer to linked list
  * Return: list
  */
 

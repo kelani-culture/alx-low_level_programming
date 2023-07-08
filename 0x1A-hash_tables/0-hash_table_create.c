@@ -3,7 +3,7 @@
 
 /**
  * hash_table_create - create hash table
- * @size: oh hash table
+ * @size: size of hash table
  * Return: hash table
  */
 

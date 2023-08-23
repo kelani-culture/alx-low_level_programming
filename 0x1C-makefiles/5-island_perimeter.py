@@ -3,28 +3,21 @@
 """"
     calculate perimeters of the island described in grid
 """
-
-from _typeshed import OptExcInfo
-
-
 def island_perimeter(grid):
-    
-    """
-        calculate island perimeter water = 0 and land = 1
-    """
-
     perimeter = 0
-    row = len(grid)
-    col = len(grid[0])
-
-    for i in range(row):
-        for j in range(col):
-            if grid[i][j] == 1:
-                perimeter = 4
-
-            if i > 0 and grid[i - 1][j] == 1:
-                perimeter -= 2
-            if j > 0 and grid[i][j -  1] == 1:
-                perimeter -= 2
-
+    
+    rows = len(grid)
+    cols = len(grid[0])
+    
+    for row in range(rows):
+        for col in range(cols):
+            if grid[row][col] == 1:  # Check if it's a land cell
+                perimeter += 4  # Assume 4 edges
+                
+                # Check neighboring cells (up, down, left, right)
+                if row > 0 and grid[row - 1][col] == 1:
+                    perimeter -= 2  # Deduct 2 for shared edge
+                if col > 0 and grid[row][col - 1] == 1:
+                    perimeter -= 2  # Deduct 2 for shared edge
+                    
     return perimeter

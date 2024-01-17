@@ -15,12 +15,13 @@ int interpolation_search(int *array, size_t size, int value)
 
 	while (low <= high && value >= array[low] && value <= array[high])
 	{
-		size_t probe = low + (high - low) * (value - array[low]) /\
-			(array[high] - array[low]);	
+		size_t probe = low + (high - low) * (value - array[low]) /
+			(array[high] - array[low]);
 
 		printf("Value checked array[%d] = [%d]\n", (int)probe, array[probe]);
 		if (value == array[probe])
-			return probe;
+			return (probe);
+
 		else if (value > array[probe])
 			low = probe + 1;
 		else
